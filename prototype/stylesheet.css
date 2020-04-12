@@ -15,11 +15,23 @@ body {
     margin-top: 80vh;
 }
 
+
+/* Color swapping on first page */
+.swapColors:hover {
+    background-color: #2a363b;
+    color: #fff;
+    transition: ease-in 0.3s;
+}
+
 /* NAVBAR STYLES */
 /* navbar */
 .navbar-default {
     background-color: #EBB48C;
     border-color: #EBB48C;
+}
+
+.bg-default {
+    background-color: #ebb48c;
 }
 /* Title */
 .navbar-default .navbar-brand {

@@ -12,7 +12,7 @@
     <body>
         <!-- Navbar -->
         <nav class="navbar navbar-light bg-default navbar-expand-sm fixed-top">
-            <a class="navbar-brand" href="#">HytteBytte</a>
+            <a class="navbar-brand" href="./index.html">HytteBytte</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,15 +34,19 @@
         </nav>
         <!-- End of navbar -->
         <!-- Main content of page -->
+        <br><br><br>
         <div class="container-fluid">
-            <div class="row">
-                <a href="./leietagerLogin.html" class="btn col-md swapColors">
-                    <h3 class="centerButton">Leietager</h3>  
-                </a>
-                <a href="./utleierLogin.html" class="btn col-md swapColors">
-                    <h3 class="centerButton">Utleier</h3>
-                </a>
-            </div>
+            <h1>Logg inn som leietager</h1>
+            <form>
+                <div class="form-group">
+                    <input class="form-control-lg col-10 col-sm-8 col-md-4 col-lg-2" type="text" placeholder="Brukernavn" id="inputUsername">
+                    <input class="form-control-lg col-10 col-sm-8 col-md-4 col-lg-2" type="password" placeholder="Passord" id="inputPassword">
+                </div>
+                <button class="btn btn-lg btn-outline-success col-10 col-sm-8 col-md-8 col-lg-4" type="submit">Logg inn</button>
+            </form>
+            <br>
+            <label class="col-12" for="newUserButton">Har du ingen bruker?</label>
+            <button id="newUserButton" class="btn btn-sm btn-outline-success col-10 col-sm-8 col-md-8 col-lg-4" type="button">Registrer deg!</button>
         </div>
         <!-- End of main content :( -->
 
