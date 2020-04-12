@@ -1,0 +1,29 @@
+
+1: Har du noen gang leid hytte i sammenheng med ferie eller tur?
+	a. Er det enkelt å leie hytte?
+	b. Hvilken plattform brukte du for å finne en hytte?
+	c. Hvilken sesong leide du hytta?
+	d. Syntes du det er dyrt å leie hytte?
+	e. Delte du hytte med noen du kjente/ukjente når du leide den?
+	f. Kunne du tenkt deg å leie hytte sammen med noen andre om fasilitetene der er gode nok til det?
+	g. Hvis du kunne leid hytte mot alternativ betaling/ redusert pris i bytte mot at du må gjøre noe arbeid der, for eksempel måke oppkjørselen og kappe ved, ville du gjort det?
+	h. Hadde det vært større sannsynlighet for at du leier hytte hvis det hadde vært en egen app/nettside for det?
+	i. Er det viktig for deg å ha pågående kontakt med utleier gjennom en chat mens du leier hytte?
+	j. Hva er det viktigste for deg når du ser etter hytte?
+
+
+
+2: Eier du hytte?
+	-JA: 
+		a. Leier du ut hytta di?
+		b. Er det enkelt å leie ut hytta?
+		c. Hvilken plattform bruker du for å leie den ut? (Finn.no etc.).
+	 	d. Er det ofte stor pågang av folk som vil leie den, og hvilken sesong er det mest trafikk?
+		e. Er det noe du kommer på som kunne hjulpet deg å leie ut hytta?
+		f. Kunne du tenkt deg å leie ut hytta hvis betalingen hadde vært hjelp med forskjellige oppgaver rundt vedlikehold? evt. redusert prisen?
+			(For eksempel måking, vasking, vedhugging o.l)?
+	-NEI: 
+		a. Ville det å eie hytte vært aktuelt om du enkelt kunne leid den ut mot betaling eller hjelp med måking o.l på hytta?
+		b. Har du vurdert å leie ut hytta?
+			c. Hva må til for at du kunne tenkt deg å leie ut hytta?
+
