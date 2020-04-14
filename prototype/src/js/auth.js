@@ -7,9 +7,12 @@ auth.onAuthStateChanged((user) => {
         // User is signed in
         const userEmail = user.email;
         console.log("Signed in as: " + userEmail);
+
+        setupUI(user);
     } else {
         console.log("Signed out.");
         // User is signed out
+        setupUI();
     }
 });
 
