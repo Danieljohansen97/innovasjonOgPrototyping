@@ -37,6 +37,11 @@ if (loginForm) {
     });
 }
 
+// Sign the user out
+const signOut = () => {
+    auth.signOut();
+}
+
 // Signup form listener
 if (signupForm) {
     signupForm.addEventListener('submit', (e) => {
@@ -55,8 +60,15 @@ if (signupForm) {
                 let message = err.message;
                 console.log(message);
             }).then(() => {
-                $('#signupModal').modal('hide');
-            })
+                // Update profile information
+                auth.currentUser.updateProfile({
+                    displayName: name
+                }).then(() => {
+                    $('#signupModal').modal('hide');
+                }).catch((err) => {
+                    console.log(err.message);
+                });
+            });
         } else {
             // TODO: display error message
             console.log("Passordene er ikke like");

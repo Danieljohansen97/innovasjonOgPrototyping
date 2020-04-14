@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Hyttebytte</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Other links -->
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-light bg-default navbar-expand-sm fixed-top">
+            <a class="navbar-brand" href="./index.html">HytteBytte</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="./hutBrowser.html" class="nav-link">Hytter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Om oss</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a onclick="signOut()" href="#" class="nav-link logged-in">Logg ut</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./leietagerLogin.html" class="nav-link logged-out">Logg inn</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End of navbar -->
+        <!-- Main content of page -->
+        <div style="display: none;" class="container-fluid logged-out">
+            
+        </div>
+        <div style="display: none;" class="container-fluid logged-in">
+            <div class="row paddingRow"></div>
+            <div class="row">
+                <h1 class="col-12">Din profil</h1>
+            </div>
+        </div>
+        <!-- End of main content :( -->
+
+        <!-- Other js -->
+        <!-- Bootstrap implementation -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <!-- Firebase config -->
+        <script src="./src/js/firebaseConfig.js"></script>
+        <script>
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+        </script>
+        <script src="./src/js/auth.js"></script>
+        <script src="./src/js/render.js"></script>
+        <script src="./src/js/script.js"></script>
+    </body>
+</html>

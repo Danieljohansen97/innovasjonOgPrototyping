@@ -3,6 +3,10 @@ body {
     color: #2a363b;
 }
 
+.paddingRow {
+    height: 56px;
+}
+
 .container-fluid {
     text-align: center;
 }
