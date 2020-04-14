@@ -37,10 +37,10 @@
         <br><br><br>
         <div class="container-fluid">
             <h1>Logg inn som leietager</h1>
-            <form>
+            <form id="loginForm">
                 <div class="form-group">
-                    <input class="form-control-lg col-10 col-sm-8 col-md-4 col-lg-2" type="text" placeholder="Brukernavn" id="inputUsername">
-                    <input class="form-control-lg col-10 col-sm-8 col-md-4 col-lg-2" type="password" placeholder="Passord" id="inputPassword">
+                    <input class="form-control-lg col-10 col-sm-8 col-md-4 col-lg-2" type="email" placeholder="E-post" name="email">
+                    <input class="form-control-lg col-10 col-sm-8 col-md-4 col-lg-2" type="password" placeholder="Passord" name="password">
                 </div>
                 <button class="btn btn-lg btn-outline-success col-10 col-sm-8 col-md-8 col-lg-4" type="submit">Logg inn</button>
             </form>
@@ -68,6 +68,7 @@
             firebase.initializeApp(firebaseConfig);
             const auth = firebase.auth();
         </script>
+        <script src="./src/js/auth.js"></script>
         <script src="./src/js/script.js"></script>
     </body>
 </html>
