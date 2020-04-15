@@ -3,8 +3,12 @@ body {
     color: #2a363b;
 }
 
+.navLogo {
+    max-width: 50px;
+}
+
 .paddingRow {
-    height: 56px;
+    height: 84px;
 }
 
 .container-fluid {

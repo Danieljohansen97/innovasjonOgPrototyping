@@ -12,7 +12,7 @@
     <body>
         <!-- Navbar -->
         <nav class="navbar navbar-light bg-default navbar-expand-sm fixed-top">
-            <a class="navbar-brand" href="./index.html">HytteBytte</a>
+            <a class="navbar-brand" href="./index.html"><img src="./src/img/hyttebytte-ramme.png" class="navLogo"></a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -47,6 +47,19 @@
             <div class="row paddingRow"></div>
             <div class="row">
                 <h1 class="col-12">Din profil</h1>
+            </div>
+            <div class="row">
+                <div class="col-10 text-left">
+                    <h4>Informasjon</h4>
+                    <p id="profileDisplayName"></p>
+                    <p id="profileEmail"></p>
+                </div>
+                <div class="col-2">
+                    <h4>Innstillinger</h4>
+                    <button id="changeEmailButton" class="btn-sm btn-primary">Bytt e-post</button>
+                    <button id="changePasswordButton" class="btn-sm btn-primary">Bytt Passord</button>
+                    <button id="deleteUserButton" class="btn-sm btn-danger">Slett bruker</button>
+                </div>
             </div>
         </div>
         <!-- End of main content :( -->

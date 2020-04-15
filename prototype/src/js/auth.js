@@ -75,3 +75,98 @@ if (signupForm) {
         }
     });
 }
+
+// User profile settings
+if(window.location.href.endsWith("profile.html")) {
+    // Get buttons
+    const changeEmailBtn = document.querySelector('#changeEmailButton');
+    const changePasswordBtn = document.querySelector('#changePasswordButton');
+    const deleteUserBtn = document.querySelector('#deleteUserButton');
+
+    // Change email
+    changeEmailBtn.addEventListener('click', () => {
+        let user = auth.currentUser;
+        let email = user.email;
+        let password = prompt("Please type in your password to change email.");
+        var credential = firebase.auth.EmailAuthProvider.credential(email, password);
+
+        user.reauthenticateWithCredential(credential).then(function() {
+            // User re-authenticated.
+            let newEmail = prompt("Skriv ønsket e-post");
+
+            user.updateEmail(newEmail).then(() => {
+                // Update successful
+                setupUI(user);
+            }).catch((err) => {
+                // An error happened
+                alert("Kunne ikke oppdatere e-post, noe gikk galt :(");
+                console.log(err.message);
+            });
+          }).catch(function(error) {
+            // An error happened.
+            if (error.message === "The password is invalid or the user does not have a password."){
+                alert("Passordet er ugyldig.");
+            }
+            console.log(error.message);
+          });
+    });
+
+    // Change password
+    changePasswordBtn.addEventListener('click', () => {
+        let user = auth.currentUser;
+        let email = user.email;
+        let password = prompt("Vennligst skriv ditt gamle passord.");
+        var credential = firebase.auth.EmailAuthProvider.credential(email, password);
+
+        user.reauthenticateWithCredential(credential).then(function() {
+            // User re-authenticated.
+            let newPassword = prompt("Skriv ønsket passord");
+
+            user.updatePassword(newPassword).then(() => {
+                // Update successful
+                setupUI(user);
+            }).catch((err) => {
+                // An error happened
+                alert("Kunne ikke oppdatere passord, noe gikk galt :(");
+                console.log(err.message);
+            });
+          }).catch(function(error) {
+            // An error happened.
+            if (error.message === "The password is invalid or the user does not have a password."){
+                alert("Passordet er ugyldig.");
+            }
+            console.log(error.message);
+          });
+    });
+
+    // Delete user
+    deleteUserBtn.addEventListener('click', () => {
+        let user = auth.currentUser;
+        let email = user.email;
+        let password = prompt("Vennligst skriv inn passord for å fortsette.");
+        var credential = firebase.auth.EmailAuthProvider.credential(email, password);
+
+        user.reauthenticateWithCredential(credential).then(function() {
+            // User re-authenticated.
+            var confirmationGiven = confirm("Trykk på 'ok' for å slette brukeren.");
+
+            if (confirmationGiven) {
+                user.delete().then(() => {
+                    setupUI(user);
+                }).catch((error) => {
+                    console.log(error.message);
+                    alert("Kunne ikke slette brukeren");
+                });
+            } else {
+                console.log("Aborted: did not delete user");
+            };
+
+          }).catch(function(error) {
+            // An error happened.
+            if (error.message === "The password is invalid or the user does not have a password."){
+                alert("Passordet er ugyldig.");
+            }
+            console.log(error.message);
+          });
+    });
+}
