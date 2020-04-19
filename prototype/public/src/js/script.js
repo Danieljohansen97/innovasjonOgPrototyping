@@ -1,3 +1,5 @@
+const hutMainContainer = document.querySelector('#hutMainContainer');
+
 const modalContent = document.querySelector('#modalContent');
 const modalTitle = document.querySelector('#exampleModalCenterTitle');
 
