@@ -23,6 +23,20 @@ body {
     margin-top: 80vh;
 }
 
+.hutContainer img {
+    max-width: 80%;
+}
+
+.hutContainer {
+    background-color: #d1eaf3;
+    border: 1px solid #57caf4;
+    margin: 5px;
+}
+.hutContainer:hover {
+    background-color: #CCC;
+    cursor: pointer;
+}
+
 /* Color swapping on first page */
 .swapColors:hover {
     background-color: #2a363b;
